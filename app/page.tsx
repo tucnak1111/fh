@@ -51,15 +51,23 @@ export default function Page() {
               </HLink>
             ))}
           </nav>
+
+          <HLink href="/account" className="no-underline">
+            <Badge
+              color="accent"
+              variant="soft"
+              className="cursor-pointer hover:text-foreground/95"
+            >
+              User
+            </Badge>
+          </HLink>
         </div>
       </header>
 
       <main className="mx-auto max-w-6xl px-6">
         <section className="py-16 md:py-24">
           <div className="max-w-2xl">
-            <Badge color="accent" variant="soft" className="mb-4 w-fit">
-              Featured drop
-            </Badge>
+            
 
             <div className="text-5xl font-semibold tracking-tight text-foreground/95 md:text-6xl">
               Lynq Case
@@ -99,18 +107,15 @@ export default function Page() {
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <Badge color="accent" variant="soft" className="mb-4 w-fit">
-                LynqCharge
-              </Badge>
               <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
-                smarter power, zero fuss
+                LynqCharge
               </div>
               <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
                 Fast-ready charging with tidy cable moments. Designed to feel like it belongs.
               </div>
 
               <div className="mt-7 flex flex-col gap-4">
-                <Button variant="primary" onPress={() => {}} className="w-fit">
+                <Button isDisabled variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqCharge
                 </Button>
                 <div className="flex items-center gap-4">
@@ -132,15 +137,7 @@ export default function Page() {
               <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-success/10 blur-2xl" />
               <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
               <div className="relative mt-5 flex flex-wrap gap-2">
-                <Badge color="success" variant="soft">
-                  Quick-ready
-                </Badge>
-                <Badge color="warning" variant="soft">
-                  Smart flow
-                </Badge>
-                <Badge color="accent" variant="soft">
-                  Clean fit
-                </Badge>
+               
               </div>
             </div>
           </div>
@@ -151,18 +148,16 @@ export default function Page() {
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
-              <Badge color="success" variant="soft" className="mb-4 w-fit">
-                LynqBuds
-              </Badge>
+
               <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
-                clean sound on demand
+                LynqBuds
               </div>
               <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
                 Crisp audio, comfortable fit, and a minimal case that looks good anywhere.
               </div>
 
               <div className="mt-7 flex flex-col gap-4">
-                <Button variant="primary" onPress={() => {}} className="w-fit">
+                <Button isDisabled variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqBuds
                 </Button>
                 <div className="flex items-center gap-4">
@@ -184,15 +179,6 @@ export default function Page() {
               <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-accent/10 blur-2xl" />
               <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
               <div className="relative mt-5 flex flex-wrap gap-2">
-                <Badge color="accent" variant="soft">
-                  Crisp tuning
-                </Badge>
-                <Badge color="success" variant="soft">
-                  Comfort fit
-                </Badge>
-                <Badge color="warning" variant="soft">
-                  All-day feel
-                </Badge>
               </div>
             </div>
           </div>
@@ -203,18 +189,15 @@ export default function Page() {
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
-              <Badge color="warning" variant="soft" className="mb-4 w-fit">
-                LynqWatch
-              </Badge>
               <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
-                timeless control
+                LynqWatch
               </div>
               <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
                 Quick actions and gentle notifications—built to stay out of the way until you need it.
               </div>
 
               <div className="mt-7 flex flex-col gap-4">
-                <Button variant="primary" onPress={() => {}} className="w-fit">
+                <Button isDisabled variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqWatch
                 </Button>
                 <div className="flex items-center gap-4">
@@ -236,15 +219,6 @@ export default function Page() {
               <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-accent/10 blur-2xl" />
               <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
               <div className="relative mt-5 flex flex-wrap gap-2">
-                <Badge color="accent" variant="soft">
-                  Quick actions
-                </Badge>
-                <Badge color="success" variant="soft">
-                  Gentle alerts
-                </Badge>
-                <Badge color="warning" variant="soft">
-                  All-day ready
-                </Badge>
               </div>
             </div>
           </div>
