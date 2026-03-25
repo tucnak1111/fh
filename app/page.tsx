@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Button, Card, Link as HLink } from "@heroui/react";
+import { Badge, Button, Link as HLink } from "@heroui/react";
 
 const navItems = [
   { label: "LynqBook", href: "#" },
@@ -33,8 +33,7 @@ export default function Page() {
   return (
     <div className="min-h-screen">
       <header
-        className="sticky top-0 z-50 border-b border-foreground/10"
-        style={{ backgroundColor: "var(--background)" }}
+        className="sticky top-0 z-50 border-b border-foreground/10 bg-background/70 backdrop-blur-xl"
       >
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
           <div className="flex items-center gap-3">
@@ -72,7 +71,7 @@ export default function Page() {
             <div className="mt-8 flex flex-col gap-4">
               <div className="flex flex-wrap items-center gap-3">
                 <Button
-                  variant="primary"
+                  variant="primary" isDisabled
                   onPress={() => {}}
                   className="px-6"
                 >
@@ -96,106 +95,156 @@ export default function Page() {
           </div>
         </section>
 
-        <section className="pb-16 md:pb-20">
-          <div className="rounded-3xl border border-foreground/10 bg-gradient-to-b from-foreground/5 to-transparent p-6 md:p-10">
-            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-              <div>
-                <div className="text-2xl font-semibold tracking-tight text-foreground/95 md:text-3xl">
-                  Built for everyday power
-                </div>
-                <div className="mt-2 text-sm font-medium text-foreground/65 md:text-base">
-                  A minimal, clean case that feels effortless and keeps your phone ready.
-                </div>
+        <section className="pb-16 md:pb-24">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div>
+              <Badge color="accent" variant="soft" className="mb-4 w-fit">
+                LynqCharge
+              </Badge>
+              <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
+                smarter power, zero fuss
               </div>
-              <div className="flex flex-wrap items-center gap-2">
-                <Badge color="success" variant="soft">
-                  Fast-ready
-                </Badge>
-                <Badge color="accent" variant="soft">
-                  Slim fit
-                </Badge>
-                <Badge color="warning" variant="soft">
-                  Drop-ready
-                </Badge>
+              <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
+                Fast-ready charging with tidy cable moments. Designed to feel like it belongs.
+              </div>
+
+              <div className="mt-7 flex flex-col gap-4">
+                <Button variant="primary" onPress={() => {}} className="w-fit">
+                  Shop LynqCharge
+                </Button>
+                <div className="w-fit">
+                  <Button
+                    isDisabled
+                    variant="ghost"
+                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                  >
+                    learn more
+                  </Button>
+                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                    unavailable in your region
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="mt-8 grid gap-4 md:grid-cols-3">
-              {[
-                { title: "LynqCharge", desc: "A smarter power flow that starts when you need it." },
-                { title: "Mag-safe alignment", desc: "Snap-on stability with a clean, minimal feel." },
-                { title: "Protection layer", desc: "Guarded edges designed for the real world." }
-              ].map((f) => (
-                <Card key={f.title} variant="secondary" className="h-full">
-                  <Card.Header>
-                    <Card.Title>{f.title}</Card.Title>
-                    <Card.Description>{f.desc}</Card.Description>
-                  </Card.Header>
-                  <Card.Content>
-                    <div className="text-sm font-medium text-foreground/60">
-                      Designed to look great, built to keep going.
-                    </div>
-                  </Card.Content>
-                  <Card.Footer className="pt-0">
-                    <Button variant="ghost" className="px-0" isDisabled>
-                      Details
-                    </Button>
-                  </Card.Footer>
-                </Card>
-              ))}
+            <div className="relative overflow-hidden rounded-[28px] border border-foreground/10 bg-gradient-to-br from-foreground/8 via-transparent to-foreground/10 p-8">
+              <div className="absolute -right-10 -top-10 size-40 rounded-full bg-accent/15 blur-2xl" />
+              <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-success/10 blur-2xl" />
+              <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
+              <div className="relative mt-5 flex flex-wrap gap-2">
+                <Badge color="success" variant="soft">
+                  Quick-ready
+                </Badge>
+                <Badge color="warning" variant="soft">
+                  Smart flow
+                </Badge>
+                <Badge color="accent" variant="soft">
+                  Clean fit
+                </Badge>
+              </div>
             </div>
           </div>
         </section>
 
         <section className="pb-16 md:pb-24">
-          <div className="grid gap-6 md:grid-cols-2 md:items-stretch">
-            <Card variant="tertiary" className="overflow-hidden">
-              <div className="p-6">
-                <Badge color="accent" variant="soft" className="mb-3 w-fit">
-                  Lynq Ecosystem
-                </Badge>
-                <Card.Header className="px-0">
-                  <Card.Title className="text-2xl">Power that syncs</Card.Title>
-                  <Card.Description>
-                    Keep your devices coordinated: from charging behavior to quick actions.
-                  </Card.Description>
-                </Card.Header>
-                <Card.Footer className="mt-4 flex items-center gap-3">
-                  <Button onPress={() => {}} variant="secondary">
-                    See compatibility
-                  </Button>
-                  <Button isDisabled variant="ghost">
-                    Coming soon
-                  </Button>
-                </Card.Footer>
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div className="order-2 md:order-1">
+              <Badge color="success" variant="soft" className="mb-4 w-fit">
+                LynqBuds
+              </Badge>
+              <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
+                clean sound on demand
               </div>
-            </Card>
+              <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
+                Crisp audio, comfortable fit, and a minimal case that looks good anywhere.
+              </div>
 
-            <Card variant="secondary" className="overflow-hidden">
-              <div className="p-6">
-                <Badge color="success" variant="soft" className="mb-3 w-fit">
-                  Clean design
-                </Badge>
-                <Card.Header className="px-0">
-                  <Card.Title className="text-2xl">Minimal on the outside</Card.Title>
-                  <Card.Description>
-                    Soft-touch finish, tidy button placement, and a look that stays out of the way.
-                  </Card.Description>
-                </Card.Header>
-                <Card.Content>
-                  <ul className="mt-4 space-y-2 text-sm font-medium text-foreground/65">
-                    <li>• Matte feel with easy grip</li>
-                    <li>• Slim silhouette for pocket comfort</li>
-                    <li>• Smooth edges for everyday handling</li>
-                  </ul>
-                </Card.Content>
-                <Card.Footer className="mt-4">
-                  <Button variant="ghost" isDisabled>
-                    Learn sizing
+              <div className="mt-7 flex flex-col gap-4">
+                <Button variant="primary" onPress={() => {}} className="w-fit">
+                  Shop LynqBuds
+                </Button>
+                <div className="w-fit">
+                  <Button
+                    isDisabled
+                    variant="ghost"
+                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                  >
+                    learn more
                   </Button>
-                </Card.Footer>
+                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                    unavailable in your region
+                  </div>
+                </div>
               </div>
-            </Card>
+            </div>
+
+            <div className="order-1 md:order-2 relative overflow-hidden rounded-[28px] border border-foreground/10 bg-gradient-to-br from-foreground/8 via-transparent to-foreground/10 p-8">
+              <div className="absolute -right-10 -top-10 size-40 rounded-full bg-success/15 blur-2xl" />
+              <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-accent/10 blur-2xl" />
+              <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
+              <div className="relative mt-5 flex flex-wrap gap-2">
+                <Badge color="accent" variant="soft">
+                  Crisp tuning
+                </Badge>
+                <Badge color="success" variant="soft">
+                  Comfort fit
+                </Badge>
+                <Badge color="warning" variant="soft">
+                  All-day feel
+                </Badge>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="pb-16 md:pb-24">
+          <div className="grid items-center gap-10 md:grid-cols-2">
+            <div>
+              <Badge color="warning" variant="soft" className="mb-4 w-fit">
+                LynqWatch
+              </Badge>
+              <div className="text-4xl font-semibold tracking-tight text-foreground/95 md:text-5xl">
+                timeless control
+              </div>
+              <div className="mt-3 text-base font-medium text-foreground/65 md:text-lg">
+                Quick actions and gentle notifications—built to stay out of the way until you need it.
+              </div>
+
+              <div className="mt-7 flex flex-col gap-4">
+                <Button variant="primary" onPress={() => {}} className="w-fit">
+                  Shop LynqWatch
+                </Button>
+                <div className="w-fit">
+                  <Button
+                    isDisabled
+                    variant="ghost"
+                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                  >
+                    learn more
+                  </Button>
+                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                    unavailable in your region
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="relative overflow-hidden rounded-[28px] border border-foreground/10 bg-gradient-to-br from-foreground/8 via-transparent to-foreground/10 p-8">
+              <div className="absolute -right-10 -top-10 size-40 rounded-full bg-warning/15 blur-2xl" />
+              <div className="absolute -bottom-12 -left-12 size-56 rounded-full bg-accent/10 blur-2xl" />
+              <div className="relative aspect-[4/3] w-full rounded-2xl bg-background/40 backdrop-blur-sm border border-foreground/10" />
+              <div className="relative mt-5 flex flex-wrap gap-2">
+                <Badge color="accent" variant="soft">
+                  Quick actions
+                </Badge>
+                <Badge color="success" variant="soft">
+                  Gentle alerts
+                </Badge>
+                <Badge color="warning" variant="soft">
+                  All-day ready
+                </Badge>
+              </div>
+            </div>
           </div>
         </section>
       </main>
