@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Button, Link as HLink } from "@heroui/react";
+import { Avatar, Badge, Button, Link as HLink } from "@heroui/react";
 
 const navItems = [
   { label: "LynqBook", href: "#" },
@@ -52,14 +52,18 @@ export default function Page() {
             ))}
           </nav>
 
-          <HLink href="/account" className="no-underline">
-            <Badge
-              color="accent"
-              variant="soft"
-              className="cursor-pointer hover:text-foreground/95"
-            >
-              User
-            </Badge>
+          <HLink href="/account" aria-label="Account" className="no-underline">
+            <div className="flex items-center gap-2 rounded-full px-2 py-1 hover:bg-foreground/5">
+              <Badge.Anchor>
+                <Avatar size="sm">
+                  <Avatar.Fallback>U</Avatar.Fallback>
+                </Avatar>
+                <Badge color="accent" size="sm">
+                  U
+                </Badge>
+              </Badge.Anchor>
+              <span className="text-sm font-medium text-foreground/70">User</span>
+            </div>
           </HLink>
         </div>
       </header>

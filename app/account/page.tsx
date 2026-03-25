@@ -1,6 +1,6 @@
 "use client";
 
-import { Badge, Button, Card, Link as HLink } from "@heroui/react";
+import { Avatar, Badge, Button, Card, Link as HLink } from "@heroui/react";
 
 const navItems = [
   { label: "LynqBook", href: "#" },
@@ -32,9 +32,17 @@ export default function AccountPage() {
           </nav>
 
           <div className="flex items-center gap-3">
-            <Badge color="accent" variant="soft">
-              Account
-            </Badge>
+            <div className="flex items-center gap-2 rounded-full px-2 py-1">
+              <Badge.Anchor>
+                <Avatar size="sm">
+                  <Avatar.Fallback>U</Avatar.Fallback>
+                </Avatar>
+                <Badge color="accent" size="sm">
+                  U
+                </Badge>
+              </Badge.Anchor>
+              <span className="text-sm font-medium text-foreground/70">Account</span>
+            </div>
           </div>
         </div>
       </header>
