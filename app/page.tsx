@@ -1,24 +1,52 @@
 "use client";
 
-import { Link as HLink } from "@heroui/react";
+import { Button, Link as HLink } from "@heroui/react";
 
 const navItems = [
-  { label: "Mac", href: "#" },
-  { label: "iPad", href: "#" },
-  { label: "iPhone", href: "#" },
-  { label: "AirPods", href: "#" },
-  { label: "Watch", href: "#" }
+  { label: "LynqBook", href: "#" },
+  { label: "LynqPad", href: "#" },
+  { label: "LynqPhone", href: "#" },
+  { label: "LynqBuds", href: "#" },
+  { label: "LynqWatch", href: "#" }
 ];
 
 const footerColumns: Array<{ title: string; links: Array<string> }> = [
-  { title: "Shop and Learn", links: ["Store", "Mac", "iPad", "iPhone", "Watch", "AirPods"] },
-  { title: "Account", links: ["Manage Your Apple Account", "Apple Trade In", "iCloud.com"] },
-  { title: "Apple Store", links: ["Find a Store", "Genius Bar", "Today at Apple", "Group Reservations"] },
-  { title: "For Business", links: ["Apple and Business", "Shop for Business", "Shop for Education"] },
-  { title: "For Education", links: ["Apple and Education", "Shop for K-12", "Shop for College"] },
-  { title: "For Healthcare", links: ["Apple and Healthcare", "Health on Apple", "Shop for Federal Employees"] },
-  { title: "For Government", links: ["Apple and Government", "Shop for Veterans and Military", "Shop for Federal Employees"] },
-  { title: "Apple Values", links: ["Accessibility", "Environment", "Inclusion and Diversity", "Privacy", "Racial Equity and Justice", "Supply Chain Innovation"] }
+  {
+    title: "Lynq Store",
+    links: ["Store", "LynqBook", "LynqPad", "LynqPhone", "LynqWatch", "LynqBuds"],
+  },
+  { title: "Lynq Account", links: ["Manage Your Lynq Account", "Lynq Trade In", "Lynq ID"] },
+  {
+    title: "Lynq Retail",
+    links: ["Find a Lynq Store", "Lynq Genius Bar", "Today at Lynq", "Group Reservations"],
+  },
+  {
+    title: "Lynq for Business",
+    links: ["Lynq and Business", "Shop for Business", "Shop for Education"],
+  },
+  {
+    title: "Lynq for Education",
+    links: ["Lynq and Education", "Shop for K-12", "Shop for College"],
+  },
+  {
+    title: "Lynq for Healthcare",
+    links: ["Lynq and Healthcare", "Health with Lynq", "Shop for Federal Employees"],
+  },
+  {
+    title: "Lynq for Government",
+    links: ["Lynq and Government", "Shop for Veterans and Military", "Shop for Federal Employees"],
+  },
+  {
+    title: "Lynq Values",
+    links: [
+      "Accessibility",
+      "Environment",
+      "Inclusion and Diversity",
+      "Privacy",
+      "Racial Equity and Justice",
+      "Supply Chain Innovation",
+    ],
+  },
 ];
 
 function FooterLink({ label }: { label: string }) {
@@ -69,13 +97,13 @@ export default function Page() {
             </div>
 
             <div className="mt-8">
-              <HLink
-                href="#"
+              <Button
                 isDisabled
-                className="cursor-not-allowed text-base font-medium text-foreground/50 no-underline underline decoration-foreground/20 underline-offset-4"
+                variant="ghost"
+                className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
               >
                 learn more
-              </HLink>
+              </Button>
               <div className="mt-2 text-xs font-medium text-foreground/45">
                 unavailable in your region
               </div>
