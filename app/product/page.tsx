@@ -77,15 +77,14 @@ export default function ProductPage() {
                 Shop Lynq Case
               </Button>
 
-              <div className="w-fit">
+              <div className="flex items-center gap-4">
                 <Button
                   isDisabled
-                  variant="ghost"
-                  className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                  variant="secondary"
                 >
                   learn more
                 </Button>
-                <div className="mt-2 text-xs font-medium text-foreground/45">
+                <div className="text-xs font-medium text-foreground/45">
                   unavailable in your region
                 </div>
               </div>

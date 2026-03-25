@@ -79,21 +79,22 @@ export default function Page() {
                 </Button>
               </div>
 
-              <div className="w-fit">
+              <div className="flex items-center gap-4">
                 <Button
                   isDisabled
-                  variant="ghost"
-                  className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                  variant="secondary"
                 >
                   learn more
                 </Button>
-                <div className="mt-2 text-xs font-medium text-foreground/45">
+                <div className="text-xs font-medium text-foreground/45">
                   unavailable in your region
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <div aria-hidden="true" className="my-14 border-t border-foreground/10" />
 
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
@@ -112,15 +113,14 @@ export default function Page() {
                 <Button variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqCharge
                 </Button>
-                <div className="w-fit">
+                <div className="flex items-center gap-4">
                   <Button
                     isDisabled
-                    variant="ghost"
-                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                    variant="secondary"
                   >
                     learn more
                   </Button>
-                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                  <div className="text-xs font-medium text-foreground/45">
                     unavailable in your region
                   </div>
                 </div>
@@ -146,6 +146,8 @@ export default function Page() {
           </div>
         </section>
 
+        <div aria-hidden="true" className="my-14 border-t border-foreground/10" />
+
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div className="order-2 md:order-1">
@@ -163,15 +165,14 @@ export default function Page() {
                 <Button variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqBuds
                 </Button>
-                <div className="w-fit">
+                <div className="flex items-center gap-4">
                   <Button
                     isDisabled
-                    variant="ghost"
-                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                    variant="secondary"
                   >
                     learn more
                   </Button>
-                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                  <div className="text-xs font-medium text-foreground/45">
                     unavailable in your region
                   </div>
                 </div>
@@ -197,6 +198,8 @@ export default function Page() {
           </div>
         </section>
 
+        <div aria-hidden="true" className="my-14 border-t border-foreground/10" />
+
         <section className="pb-16 md:pb-24">
           <div className="grid items-center gap-10 md:grid-cols-2">
             <div>
@@ -214,15 +217,14 @@ export default function Page() {
                 <Button variant="primary" onPress={() => {}} className="w-fit">
                   Shop LynqWatch
                 </Button>
-                <div className="w-fit">
+                <div className="flex items-center gap-4">
                   <Button
                     isDisabled
-                    variant="ghost"
-                    className="h-auto min-h-0 w-fit bg-transparent px-0 py-0 cursor-not-allowed text-base font-medium text-foreground/50 underline decoration-foreground/20 underline-offset-4"
+                    variant="secondary"
                   >
                     learn more
                   </Button>
-                  <div className="mt-2 text-xs font-medium text-foreground/45">
+                  <div className="text-xs font-medium text-foreground/45">
                     unavailable in your region
                   </div>
                 </div>
